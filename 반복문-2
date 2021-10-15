@@ -1,0 +1,18 @@
+//1부터 100사이의 모든 3의 배수의 합을 계산하여 출력하는 프로그램을 반복 구조를 사용하여 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int i, total=0;//정수형 정의
+
+	for (i = 1; i * 3 <= 100; i++)//3에 곱하는 수 i가 1부터 1씩 증가
+	{
+		total += i * 3;//total값에 누적
+	}
+
+	printf("1부터 100사이의 모든 3의 배수의 합은 %d입니다.\n", total);//total 값 출력
+
+	return 0;
+}
