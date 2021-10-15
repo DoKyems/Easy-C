@@ -1,0 +1,23 @@
+//사용자가 입력한 정수의 모든 약수를 화면에 출력하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num, i;//정수형 정의
+
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);//정수 입력받기
+
+	for (i = 1; num >= i; i++)//1~num까지 1씩 증가시킴
+	{
+		if (num % i == 0)//num/1의 나머지가 0이 되면...
+		{
+			printf("%d ", i);//i값 출력
+		}
+	}
+	printf("\n");
+
+	return 0;
+}
