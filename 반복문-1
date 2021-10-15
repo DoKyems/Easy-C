@@ -1,1 +1,23 @@
+//사용자에게 하나의 수를 입력받아서 변수에 저장한다.
+//반복문을 사용하여 이 변수의 값을 1씩 감소시키면서 이 변수의 값이 0이 될 때까지 반복하라.
+//반복이 끝나면 벨소리를 내라.(/a)
 
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num;//정수형 정의
+
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);//num 입력 받기
+
+	for (num; num >= 0; num--)//num~0까지 1씩 감소한 횟수만큼 반복
+	{
+		printf("%d ", num);
+	}
+
+	printf("\n\a");//벨소리 출력
+
+	return 0;
+}
