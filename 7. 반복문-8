@@ -1,0 +1,23 @@
+//사용자로부터 1부터 50 사이의 숫자를 입력받아
+//숫자만큼의 별표를 출력하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int i, num;//정수형 정의
+
+	while (1)//무한 반복
+	{
+		printf("정수를 입력하시오: ");
+		scanf("%d", &num);//정수 입력받기
+
+		for (i = 1; i <= num; i++)//1~입력받은 값까지 반복
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
