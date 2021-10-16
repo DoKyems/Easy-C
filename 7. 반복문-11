@@ -1,0 +1,22 @@
+//사용자로부터 n값을 입력받는다.
+//1^2+2^2+3^3+.....n^2의 값을 출력하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int i, n, total=0;//정수형 정의
+
+	printf("정수 n을 입력하시오: ");
+	scanf("%d", &n);//n값 입력받기
+
+	for (i = 1; i <= n; i++)//1~n까지 반복
+	{
+		total += i*i;//i^2을 total에 누적
+	}
+
+	printf("결과는 %d입니다.\n", total);//total값 출력
+
+	return 0;
+}
