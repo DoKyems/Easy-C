@@ -1,0 +1,21 @@
+//(1+2+3+......+n)이 10000을 넘지 않으면서 가장 큰 값과 그때의 n값을 구하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int n = 0, total = 0;//정수형 정의(초기화)
+
+	for(n=0; ; n++)//무한반복하는 for문
+	{
+		total += n;
+
+		if (total >= 10000);//만약 total값이 10000을 넘는다면
+			break;//break
+	}
+
+	printf("가장 큰 값은 %d이고, 그때의 n값은 %d입니다.", total - n, n - 1);//현재 total 값이 10000이상이므로, n값을 한번 빼주고, n에서도 1을 빼줌
+
+	return 0;
+}
