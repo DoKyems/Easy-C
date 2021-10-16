@@ -1,0 +1,26 @@
+//실수의 거듭 제곱값을 계산하는 프로그램을 작성하여라.
+//사용자로부터 하나의 실수 r과 거듭 제곱 횟수를 나타내는 정수 n을 입력받아 r^n을 구하여 화면에 출력한다.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	float r;//실수형 정의
+	int i, multip = 1, n;//정수형 정의
+
+	printf("실수 r을 입력하시오: ");
+	scanf("%f", &r);//r 입력받기
+
+	printf("정수 n을 입력하시오: ");
+	scanf("%d", &n);//n 입력받기
+
+	for (i = 1; i <= n; i++)//i~n까지 반복
+	{
+		multip *= r;//multip값에 r값 곱하기
+	}
+
+	printf("r^n= %d입니다.\n", multip);//multip 값 출력
+
+	return 0;
+}
